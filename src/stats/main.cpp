@@ -140,8 +140,7 @@ int main(int argc, char* argv[]) {
     
     
   ofstream myfile;
-  myfile.open ("home/Desktop/log.txt");
-  myfile << "main class.\n";
+  myfile.open ("/var/log/cryfsLog.txt");  myfile << "main class.\n";
   myfile.close();
 
     
