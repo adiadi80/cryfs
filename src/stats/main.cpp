@@ -16,6 +16,7 @@
 #include <cpp-utils/io/IOStreamConsole.h>
 #include <cpp-utils/system/homedir.h>
 
+
 #include <set>
 
 using namespace boost;
@@ -30,6 +31,10 @@ using namespace blockstore::lowtohighlevel;
 using namespace blobstore::onblocks;
 using namespace blobstore::onblocks::datanodestore;
 using namespace cryfs::fsblobstore;
+
+
+
+#include <fstream>
 
 void printNode(unique_ref<DataNode> node) {
     std::cout << "BlockId: " << node->blockId().ToString() << ", Depth: " << static_cast<int>(node->depth()) << " ";
@@ -132,6 +137,14 @@ set<BlockId> _getAllBlockIds(const path& basedir, const CryConfigLoader::ConfigL
 
 
 int main(int argc, char* argv[]) {
+    
+    
+  ofstream myfile;
+  myfile.open ("home/Desktop/log.txt");
+  myfile << "main class.\n";
+  myfile.close();
+
+    
     if (argc != 2) {
         std::cerr << "Usage: cryfs-stats [basedir]" << std::endl;
         exit(1);
