@@ -135,7 +135,7 @@ There are additional requirements if you want to create packages. They are:
 
  1. Clone repository
 
-        $ git clone https://github.com/cryfs/cryfs.git cryfs
+        $ git clone https://github.com/adiadi80/cryfs.git cryfs
         $ cd cryfs
 
  2. Build
